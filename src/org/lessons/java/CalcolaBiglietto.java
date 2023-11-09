@@ -21,5 +21,21 @@ public class CalcolaBiglietto {
 			
 		//chiudo lo scanner
 			in.close();
+		
+		
+		//calcolo il prezzo del biglietto e applico sconti SE neecessari
+		double price = intKilometers * 0.21;
+			
+		if(intAge < 18) {
+			price *= 0.8;
+			
+		}else if(intAge > 65) {
+			price *= 0.6;
+		}
+		
+		
+		System.out.println("Il prezzo del biglietto è pari a € " + price);
+		
+		
 	}
 }
